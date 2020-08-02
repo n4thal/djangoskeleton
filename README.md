@@ -1,9 +1,9 @@
 Trying to build a skeleton page using django,
 including the following features:
-- Redis caching
+- Redis Caching
 - User Management
-- Dynamic Header
-- Footer
+- Footer & Header
+- Blog-Feature
 
 Run with Redis caching:
 $ redis-server
