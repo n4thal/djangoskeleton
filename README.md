@@ -8,6 +8,7 @@ This is a Blog-Website created using Django Web Framework.
 * Comments
 * Redis Caching
 * Header & Footer
+* Blog-RSS Feed
 
 ## Prerequisites
 
