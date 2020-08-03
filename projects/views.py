@@ -9,7 +9,7 @@ def projects_index(request):
     context = {
         'projects': projects
     }
-    return render(request, 'project_index.html', context)
+    return render(request, 'projects_index.html', context)
 
 
 def projects_detail(request, pk):
@@ -17,4 +17,4 @@ def projects_detail(request, pk):
     context = {
         'project': project
     }
-    return render(request, 'project_detail.html', context)
+    return render(request, 'projects_detail.html', context)
