@@ -13,3 +13,7 @@ $ redis-cli ping
 Run Django App:
 $ python manage.py runserver
 
+Compile all static files in project and dump into STATIC_ROOT:
+
+$ python manage.py collectstatic
+
