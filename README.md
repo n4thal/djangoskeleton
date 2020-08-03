@@ -1,14 +1,16 @@
 # Blog Website
 
-This is a Blog-Website created using Django Web Framework.
+This is a Portfolio & Blog -Website created using Django Web Framework.
 
 ## Features
 
 * Blog
+* Projects
 * Comments
 * Redis Caching
 * Header & Footer
 * Blog-RSS Feed
+* CMS within the Admin Panel
 
 ## Prerequisites
 
@@ -81,3 +83,9 @@ Create Superuser,
 ```bash
 python manage.py createsuperuser
 ```
+
+# MAKE SURE TO CHANGE BEFORE PRODUCTION:
+
+ * ALL EXPOSED KEYS
+ * ALL EXPOSED PASSWORDS
+ * set DEBUG in skeleton/settings.py to False
