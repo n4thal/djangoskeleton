@@ -1,6 +1,6 @@
-# Blog Website
+# Personal Branding Website
 
-This is a Portfolio & Blog -Website created using Django Web Framework.
+This is a Portfolio & Blog - Website created using Django Web Framework.
 
 ## Features
 
