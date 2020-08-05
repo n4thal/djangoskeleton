@@ -25,6 +25,7 @@ sitemaps = {
 }
 
 urlpatterns = [
+    path('', include('core.urls'), name="core-urls"),
     path('admin/', admin.site.urls),
     path('blog/', include('blog.urls'), name="blog-urls"),
     path('projects/', include('projects.urls'), name="projects-urls"),
