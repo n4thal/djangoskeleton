@@ -1,7 +1,6 @@
 <!-- {% load static %} -->
 
 <!DOCTYPE html>
-<!-- https://djangocentral.com/building-a-blog-application-with-django/ -->
 <html>
 
     <head>
@@ -76,7 +75,7 @@
             <a class="font-weight-bold text-center" href="/contact">Contact me</a>
             <br>
             <a class="text-center" href="/impressum">Impressum</a>
-            <p class="m-0 text-dark text-center ">Copyright &copy; Martin Schlander</p>
+            <p class="m-0 text-dark text-center ">Copyright &copy; {{ author.name }}</p>
         </footer>
     </body>
 </html>
