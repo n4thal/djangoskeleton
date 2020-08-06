@@ -79,12 +79,12 @@ Migrate Database,
 python manage.py migrate
 ```
 
-Input your secret key,
+Set environmental variables,
 ```bash
-python
-import os
-os.environ['SECRET_KEY'] = 'input your key'
+os.environ['SECRET_KEY']='your very secret key here'
 ```
+In PyCharm:
+Edit the config of the manage.py run and add your key there.
 
 Run the web application locally,
 ```bash

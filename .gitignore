@@ -3,3 +3,4 @@
 /blog/migrations/
 /core/migrations/
 /dump.rdb
+/environment.env
