@@ -14,12 +14,12 @@
                     I am available for freelance projects and full-time employment.
                 </p>
                 <br>
-                <h1>Martin Schlander</h1>
-                <p>Walchstadter Str. 4a</p>
-                <p>82266 Inning</p>
+                <h1>{{ author.name }}</h1>
+                <p>{{ author.street }}</p>
+                <p>{{ author.postcode }} {{ author.city }}</p>
                 <br>
-                <p>Mail: <a href="mailto:martin.schlander@hotmail.com">martin.schlander@hotmail.com</a> </p>
-                <p>mobile: {{ contact.phone }}</p>
+                <p>Mail: <a href="mailto:{{ author.mail }}">{{ author.mail }}</a> </p>
+                <p>mobile: {{ author.phone }}</p>
                 <br>
                 <!-- <a href="/legal">Legal Disclaimer</a> -->
             </div>
