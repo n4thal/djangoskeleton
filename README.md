@@ -69,6 +69,11 @@ Install development dependencies,
 pip install -r requirements.txt
 ```
 
+Initialize Migrations
+```bash
+python manage.py makemigrations
+```
+
 Migrate Database,
 ```bash
 python manage.py migrate
