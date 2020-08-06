@@ -85,8 +85,13 @@ os.environ['SECRET_KEY']='your very secret key here'
 ```
 In PyCharm:
 Edit the config of the manage.py run and add your key there.
+https://i.stack.imgur.com/jwpVo.png
+Also add the parameter
+```bash
+runserver
+```
 
-Run the web application locally,
+Run the web application via the newly created config in PyCharm or locally,
 ```bash
 python manage.py runserver # 127.0.0.1:8000
 ```
