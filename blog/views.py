@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from blog.models import Post
 from blog.forms import CommentForm
 from django.views import generic
+from core.models import Author, MetaInfo
 
 
 # Create your views here.
@@ -11,6 +12,8 @@ class PostList(generic.ListView):
 
 
 def post_detail(request, slug):
+    author = get_object_or_404(Author, pk=1)
+    meta = get_object_or_404(MetaInfo, pk=1)
 
     template_name = 'post_detail.html'
     post = get_object_or_404(Post, slug=slug)
@@ -30,4 +33,7 @@ def post_detail(request, slug):
     return render(request, template_name, {'post': post,
                                            'comments': comments,
                                            'new_comment': new_comment,
-                                           'comment_form': comment_form})
+                                           'comment_form': comment_form,
+                                           'author': author,
+                                           'meta': meta,
+                                           })

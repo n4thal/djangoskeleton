@@ -1,37 +1,44 @@
-from django.http import HttpResponse
-from django.shortcuts import render
-from core.models import Core
+from django.shortcuts import render, get_object_or_404
+from core.models import Author, MetaInfo
+
 
 # Create your views here.
-
-
-def index(request):
-    core = Core.objects.all()
+def landing(request):
+    author = get_object_or_404(Author, pk=1)
     context = {
-        'core': core,
+        'author': author,
     }
     return render(request, 'landing.html', context)
 
 
 def contact(request):
-    contact = Core.objects.all()
+    author = get_object_or_404(Author, pk=1)
+    mail = author.mail
     context = {
-        'contact': contact,
+        'author': author,
     }
     return render(request, 'contact.html', context)
 
 
 def impressum(request):
-    impressum = Core.objects.all()
+    author = get_object_or_404(Author, pk=1)
     context = {
-        'imp': impressum,
+        'author': author,
     }
     return render(request, 'impressum.html', context)
 
 
 def legal(request):
-    legal = Core.objects.all()
+    author = get_object_or_404(Author, pk=1)
     context = {
-        'legal': legal
+        'author': author,
     }
     return render(request, 'legal.html', context)
+
+
+def metaInfo(request):
+    meta = get_object_or_404(MetaInfo, pk=1)
+    context = {
+        'meta': meta,
+    }
+    return render(request, 'base.html', context)

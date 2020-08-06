@@ -4,13 +4,13 @@
 <html>
 
     <head>
-        <title>Martin Schlander</title>
+        <title></title>
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
         <meta name="google" content="notranslate" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Blog and Projects about Technology">
-        <meta name="author" content="Martin Schlander">
-        <meta name="keywords" content="HTML, CSS, JavaScript, Python, Django, C++, Cpp, Java, C#, Portfolio, Projects, Code, Coding, Martin Schlander, Schlander, Martin">
+        <meta name="description" content="{{ meta.description }}">
+        <meta name="author" content="{{ author.name }}">
+        <meta name="keywords" content="{{ meta.keywords }}">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
 
@@ -48,9 +48,8 @@
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" id="mainNav">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/">Martin Schlander</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="/">{{ author.name }}</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">

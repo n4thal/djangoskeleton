@@ -14,12 +14,10 @@ class Author(models.Model):
     history = models.CharField(max_length=2000)
     call_to_action = models.CharField(max_length=127)
 
+    def __str__(self):
+        return self.name
+
 
 class MetaInfo(models.Model):
     description = models.CharField(max_length=511)
     keywords = models.CharField(max_length=2000)
-
-
-class Core(models.Model):
-    pass
-
