@@ -101,6 +101,10 @@ Create Superuser,
 python manage.py createsuperuser
 ```
 
+Add Content at: url/admin (login with previously created superuser account)
+
+Enjoy!
+
 # MAKE SURE TO CHANGE BEFORE PRODUCTION:
 
  * set DEBUG in skeleton/settings.py to False
