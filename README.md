@@ -79,6 +79,13 @@ Migrate Database,
 python manage.py migrate
 ```
 
+Input your secret key,
+```bash
+python
+import os
+os.environ['SECRET_KEY'] = 'input your key'
+```
+
 Run the web application locally,
 ```bash
 python manage.py runserver # 127.0.0.1:8000
@@ -91,6 +98,4 @@ python manage.py createsuperuser
 
 # MAKE SURE TO CHANGE BEFORE PRODUCTION:
 
- * ALL EXPOSED KEYS
- * ALL EXPOSED PASSWORDS
  * set DEBUG in skeleton/settings.py to False
