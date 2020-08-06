@@ -61,7 +61,7 @@ Clone GitHub Project,
 ```bash
 git@github.com:n4thal/djangoskeleton.git
 
-cd banking-system
+cd djangoskeleton
 ```
 
 Install development dependencies,
