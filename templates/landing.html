@@ -6,7 +6,7 @@
     .card-img {
         filter: brightness(60%);
     }
-    .card-img-overlay {
+    .white-text {
         color: white;
         text-shadow: 2px 2px 4px #000000;
     }
@@ -31,12 +31,11 @@
                         <div class="card-body">
                             <img class="card-img" src="{% static project.image %}">
                             <div class="card-img-overlay">
-                                <h2 class="card-title">{{ project.title }}</h2>
-                                <p class="card-text text-muted h6"> {{ project.publication_date }} </p>
-                                <p class="card-text">{{ project.summary|slice:":120" }}</p>
-
+                                <h2 class="card-title white-text">{{ project.title }}</h2>
+                                <p class="card-text white-text text-muted h6"> {{ project.publication_date }} </p>
+                                <p class="card-text white-text">{{ project.summary|slice:":105" }}</p>
+                                <a href="{% url 'projects_detail' project.pk %}" class="btn btn-primary ">Read More &rarr;</a>
                             </div>
-                            <a href="{% url 'projects_detail' project.pk %}" class="btn btn-primary ">Read More &rarr;</a>
                         </div>
                     </div>
                     {% endfor %}
