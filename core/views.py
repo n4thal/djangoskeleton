@@ -33,14 +33,6 @@ def impressum(request):
     return render(request, 'impressum.html', context)
 
 
-def legal(request):
-    author = get_object_or_404(Author, pk=1)
-    context = {
-        'author': author,
-    }
-    return render(request, 'legal.html', context)
-
-
 def metaInfo(request):
     meta = get_object_or_404(MetaInfo, pk=1)
     context = {
