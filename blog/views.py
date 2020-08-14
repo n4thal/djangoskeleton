@@ -6,9 +6,15 @@ from core.models import Author, MetaInfo
 
 
 # Create your views here.
-class PostList(generic.ListView):
-    queryset = Post.objects.filter(status=1).order_by('-publication_date')
-    template_name = 'blog_index.html'
+def post_index(request):
+    posts = Post.objects.all()
+    posts.filter(status=True).order_by("-publication_date")
+    author = get_object_or_404(Author, pk=1)
+    context = {
+        'posts': posts,
+        'author': author,
+    }
+    return render(request, 'blog_index.html', context)
 
 
 def post_detail(request, slug):

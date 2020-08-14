@@ -1,19 +1,24 @@
 from django.shortcuts import render, get_object_or_404
 from core.models import Author, MetaInfo
+from blog.models import Post
+from projects.models import Project
 
 
 # Create your views here.
 def landing(request):
     author = get_object_or_404(Author, pk=1)
+    most_recent_post = Post.objects.all().order_by('id')[:1]
+    four_most_recent_projects = Project.objects.all().order_by('id')[:4]
     context = {
         'author': author,
+        'recent_post': most_recent_post,
+        'recent_projects': four_most_recent_projects,
     }
     return render(request, 'landing.html', context)
 
 
 def contact(request):
     author = get_object_or_404(Author, pk=1)
-    mail = author.mail
     context = {
         'author': author,
     }
