@@ -28,7 +28,6 @@ Be sure you have the following installed on your development machine:
 + Django==3.0.8
 + django-redis==4.12.1
 + django-crispy-forms==1.9.2
-+ pytz==2020.1
 + redis==3.5.3
 + sqlparse==0.3.1
 
