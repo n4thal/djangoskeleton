@@ -2,12 +2,24 @@
 {% load static %}
 
 {% block content %}
+<style>
+    .card-img {
+        max-height: 100%;
+        width: auto;
+    }
+    .white-text {
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+    }
+</style>
 <div class="container">
     <div class="row">
         <div class="col-md-12 card mb-4 mt-3 left top">
-            <img src="{% static project.image %}" alt="" width="100%">
+            <img class="card-img " src="{% static project.image %}">
             <div class="card-text">
-                <h1>{{ project.title }}</h1>
+                <div class="card-img-overlay white-text">
+                    <h1>{{ project.title }}</h1>
+                </div>
                 <p>{{ project.description }}</p>
                 <br>
                 <p class=" text-muted"><b>Technology used |</b> {{ project.technology }}</p>
