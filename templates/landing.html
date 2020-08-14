@@ -2,6 +2,15 @@
 {% load static %}
 
 {% block content %}
+<style>
+    .card-img {
+        filter: brightness(60%);
+    }
+    .card-img-overlay {
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+    }
+</style>
 
 <div class="container">
     <div class="row">
@@ -14,34 +23,39 @@
                 </p>
             </div>
             <br>
-            <div class="container">
+            <div class="project-container">
                 <h1>Latest Projects</h1>
                 <div class="row">
                     {% for project in recent_projects %}
-                    <div class="card mb-4 col-lg-3 col-sm-4 d-flex align-items-stretch">
-                        <div class="card-body h-100">
-                            <img class="card-img-top" src="{% static project.image %}">
-                            <h2 class="card-title">{{ project.title }}</h2>
-                            <p class="card-text text-muted h6"> {{ project.publication_date }} </p>
-                            <p class="card-text">{{ project.summary|slice:":60" }}</p>
-                            <a href="{% url 'projects_detail' project.pk %}" class="btn btn-primary">Read More &rarr;</a>
+                    <div class="card mb-4 col-lg-3 col-sm-6">
+                        <div class="card-body">
+                            <img class="card-img" src="{% static project.image %}">
+                            <div class="card-img-overlay">
+                                <h2 class="card-title">{{ project.title }}</h2>
+                                <p class="card-text text-muted h6"> {{ project.publication_date }} </p>
+                                <p class="card-text">{{ project.summary|slice:":120" }}</p>
+
+                            </div>
+                            <a href="{% url 'projects_detail' project.pk %}" class="btn btn-primary ">Read More &rarr;</a>
                         </div>
                     </div>
                     {% endfor %}
                 </div>
             </div>
             <br>
-            <h1>Latest Blog-post</h1>
-            {% for post in most_recent_post %}
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h2 class="card-title">{{ post.title }}</h2>
-                    <p class="card-text text-muted h6">{{ post.author }} | {{ post.publication_date}} </p>
-                    <p class="card-text">{{ post.summary|slice:":200" }}</p>
-                    <a href="#" class="btn btn-primary">Read More &rarr;</a>
+            <div class="blog-container">
+                <h1>Latest Blog-post</h1>
+                {% for post in most_recent_post %}
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title">{{ post.title }}</h2>
+                        <p class="card-text text-muted h6">{{ post.author }} | {{ post.publication_date}} </p>
+                        <p class="card-text">{{ post.summary|slice:":200" }}</p>
+                        <a href="#" class="btn btn-primary">Read More &rarr;</a>
+                    </div>
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
     </div>
 </div>
