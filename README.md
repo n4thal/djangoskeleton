@@ -1,9 +1,10 @@
 # Personal Branding Website
 
-This is a Portfolio & Blog - Website created using Django Web Framework.
+This is a Personal Branding - Website created using Django Web Framework.
 
 ## Features
 
+* Landing Page
 * Blog
 * Projects
 * Comments
