@@ -3,7 +3,8 @@ from django.db import models
 
 # Create your models here.
 class Project(models.Model):
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=255, unique=True)
+    slug = models.SlugField(max_length=255, unique=True)
     summary = models.TextField(max_length=255)
     description = models.TextField()
     technology = models.CharField(max_length=20)
@@ -15,4 +16,4 @@ class Project(models.Model):
 
     def get_absolute_url(self):
         from django.urls import reverse
-        return reverse("projects_detail", kwargs={"technology": str(self.technology)})
+        return reverse("projects_detail", kwargs={"slug": str(self.slug)})
