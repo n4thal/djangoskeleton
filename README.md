@@ -32,6 +32,7 @@ Be sure you have the following installed on your development machine:
 + redis==3.5.3
 + sqlparse==0.3.1
 + pytz==2020.1
++ django-summernote==0.8.11.6
 
 ## Install Redis Server
 
