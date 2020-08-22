@@ -109,3 +109,4 @@ Enjoy!
 # MAKE SURE TO CHANGE BEFORE PRODUCTION:
 
  * set DEBUG in skeleton/settings.py to False
+ * probably move to a more stable DB
