@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block site-title %}
+{{ project.title | slice:35 }}
+{% endblock site-title %}
+
 {% block content %}
 <style>
     .card-img {

@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
 
+{% block site-title %}
+{{ post.title | slice:35 }}
+{% endblock site-title %}
+
 {% block content %}
 
 <div class="container">

@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
+
+{% block site-title %}
+Projects of {{ author.name }}
+{% endblock site-title %}
+
 {% block content %}
 <style>
     .card-img {
