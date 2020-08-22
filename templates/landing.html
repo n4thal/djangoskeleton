@@ -17,7 +17,14 @@
         <div class="col-md-12 mt-3 mb-4 left">
             <div class="card-body">
                 <h1>{{ author.hook }}</h1>
+                {% if author.picture %}
+                <div class="row">
+                    <p class="col-sm-9">{{ author.description }}</p>
+                    <img class="img-rounded col-sm-3 mh-100 mw-100" src="{% static author.picture %}" style="height: auto; overflow: hidden">
+                </div>
+                {% else %}
                 <p>{{ author.description }}</p>
+                {% endif %}
                 <p>{{ author.history }}
                     <a href="/contact">{{ author.call_to_action }}</a>
                 </p>
