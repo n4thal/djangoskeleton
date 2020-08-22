@@ -80,6 +80,11 @@ Migrate Database,
 python manage.py migrate
 ```
 
+Create Superuser,
+```bash
+python manage.py createsuperuser
+```
+
 Set environmental variables,
 ```bash
 os.environ['SECRET_KEY']='your very secret key here'
@@ -95,11 +100,6 @@ runserver
 Run the web application via the newly created config in PyCharm or locally,
 ```bash
 python manage.py runserver # 127.0.0.1:8000
-```
-
-Create Superuser,
-```bash
-python manage.py createsuperuser
 ```
 
 Add Content at: url/admin (login with previously created superuser account)
