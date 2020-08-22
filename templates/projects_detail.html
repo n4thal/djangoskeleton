@@ -20,7 +20,7 @@
                 <div class="card-img-overlay white-text">
                     <h1>{{ project.title }}</h1>
                 </div>
-                <p>{{ project.description }}</p>
+                <p>{{ project.description | safe }}</p>
                 <br>
                 <p class=" text-muted"><b>Technology used |</b> {{ project.technology }}</p>
             </div>
