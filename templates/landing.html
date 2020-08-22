@@ -34,7 +34,7 @@
                                 <h2 class="card-title white-text">{{ project.title }}</h2>
                                 <p class="card-text white-text text-muted h6"> {{ project.publication_date }} </p>
                                 <p class="card-text white-text">{{ project.summary|slice:":105" }}</p>
-                                <a href="{% url 'projects_detail' project.pk %}" class="btn btn-primary ">Read More &rarr;</a>
+                                <a href="{% url 'projects_detail' project.slug %}" class="btn btn-primary ">Read More &rarr;</a>
                             </div>
                         </div>
                     </div>

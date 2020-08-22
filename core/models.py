@@ -4,6 +4,7 @@ from django.db import models
 # Create your models here.
 class Author(models.Model):
     name = models.CharField(max_length=255)
+    picture = models.FilePathField(path='static/img', blank=True, null=True)
     street = models.CharField(max_length=255)
     postcode = models.IntegerField()
     city = models.CharField(max_length=31)

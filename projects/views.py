@@ -16,8 +16,8 @@ def projects_index(request):
     return render(request, 'projects_index.html', context)
 
 
-def projects_detail(request, pk):
-    project = Project.objects.get(pk=pk)
+def projects_detail(request, slug):
+    project = Project.objects.get(slug=slug)
     author = get_object_or_404(Author, pk=1)
     meta = get_object_or_404(MetaInfo, pk=1)
     context = {
